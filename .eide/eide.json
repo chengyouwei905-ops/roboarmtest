@@ -207,6 +207,12 @@
           },
           {
             "path": "Hardware/Serial.h"
+          },
+          {
+            "path": "Hardware/LED.c"
+          },
+          {
+            "path": "Hardware/LED.h"
           }
         ],
         "folders": []
