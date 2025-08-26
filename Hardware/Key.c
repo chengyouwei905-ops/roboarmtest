@@ -9,7 +9,7 @@ void Key_Init(void)
 	
 	GPIO_InitTypeDef GPIO_InitStructure;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
 }
@@ -26,7 +26,7 @@ uint8_t Key_GetNum(void)
 
 uint8_t Key_GetState(void)
 {
-	if(GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_2) == 0)
+	if(GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_1) == 0)
 	{
         return 1;
     }
@@ -46,9 +46,9 @@ void Key_Tick(void)
         count = 0;
         laststate = nowstate;
         nowstate  = Key_GetState();
-		if(nowstate == 0 && laststate == 1)
+		if(nowstate == 0 && laststate != 0)
 		{
-            keynum = nowstate;
+            keynum = laststate;
         }
     }
 }

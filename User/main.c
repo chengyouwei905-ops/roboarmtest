@@ -3,7 +3,7 @@
 #include "OLED.h"
 #include "Serial.h"
 #include "LED.h"
-#include "Timer2.h"
+#include "Timer3.h"
 #include "Key.h"
 
 uint16_t test = 520;
@@ -15,21 +15,21 @@ int main(void)
     OLED_Printf(0, 0, OLED_8X16, "Hello, %3d", test);
     OLED_Update();
     LED_Init();
-    Timer2_Init();
+    Timer3_Init();
     Key_Init();
 
     while (1) {
-		if(Key_GetNum() == 1)
-		{
-			LED_Turn();
-		}
+        test = Key_GetNum();
+        if (test) {
+            LED_Turn();
+        }
     }
 }
 
-void TIM2_IRQHandler(void)
+void TIM3_IRQHandler(void)
 {
-    if (TIM_GetITStatus(TIM2, TIM_IT_Update) == SET) {
+    if (TIM_GetITStatus(TIM3, TIM_IT_Update) == SET) {
         Key_Tick();
-        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+        TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
     }
 }

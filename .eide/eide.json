@@ -185,10 +185,10 @@
             "path": "System/Delay.h"
           },
           {
-            "path": "System/Timer2.c"
+            "path": "System/Timer3.c"
           },
           {
-            "path": "System/Timer2.h"
+            "path": "System/Timer3.h"
           }
         ],
         "folders": []
@@ -225,6 +225,12 @@
           },
           {
             "path": "Hardware/Key.h"
+          },
+          {
+            "path": "Hardware/PWM.c"
+          },
+          {
+            "path": "Hardware/PWM.h"
           }
         ],
         "folders": []
