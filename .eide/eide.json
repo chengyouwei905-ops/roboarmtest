@@ -183,6 +183,12 @@
           },
           {
             "path": "System/Delay.h"
+          },
+          {
+            "path": "System/Timer2.c"
+          },
+          {
+            "path": "System/Timer2.h"
           }
         ],
         "folders": []
@@ -213,6 +219,12 @@
           },
           {
             "path": "Hardware/LED.h"
+          },
+          {
+            "path": "Hardware/Key.c"
+          },
+          {
+            "path": "Hardware/Key.h"
           }
         ],
         "folders": []
