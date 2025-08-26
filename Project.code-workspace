@@ -1,15 +1,16 @@
 {
-    "folders": [
-        {
-            "path": "."
-        }
-    ],
-    "settings": {
-        "files.associations": {
-            "*.rmd": "markdown",
-            "serial.h": "c",
-            "stm32f10x.h": "c"
-        }
-    },
-    "extensions": {}
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.rmd": "markdown",
+			"serial.h": "c",
+			"stm32f10x.h": "c",
+			"math.h": "c"
+		}
+	},
+	"extensions": {}
 }

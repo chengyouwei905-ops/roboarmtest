@@ -16,7 +16,7 @@ int main(void)
 
     while (1) {
         Serial_Printf("Hello,world!");
-        Delay_ms(100);
         LED_Turn();
+        Delay_ms(100);
     }
 }
