@@ -15,7 +15,7 @@ int main(void)
 {
     Serial_Init();
     OLED_Init();
-    OLED_Printf(0, 0, OLED_8X16, "Hello, 520");
+    OLED_Printf(0, 0, OLED_8X16, "Hello");
     OLED_Update();
     LED_Init();
     Timer3_Init();
