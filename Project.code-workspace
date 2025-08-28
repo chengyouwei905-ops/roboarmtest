@@ -9,7 +9,8 @@
 			"*.rmd": "markdown",
 			"serial.h": "c",
 			"stm32f10x.h": "c",
-			"math.h": "c"
+			"math.h": "c",
+			"pwm.h": "c"
 		}
 	},
 	"extensions": {}
